@@ -1,9 +1,16 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+
+const {
+  renderIndex,
+  renderArticles,
+  renderAbout
+} = require('../controllers/index.controller');
+const { render } = require('pug');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', renderIndex);
+router.get('/articles', renderArticles);
+router.get('/about', renderAbout);
 
 module.exports = router;
