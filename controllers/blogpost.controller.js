@@ -2,19 +2,19 @@ const blogpostCtrl = {};
 
 const Blogpost = require('../models/Blogpost');
 
-blogpostCtrl.renderFormBlogpost = () => {
+blogpostCtrl.renderFormBlogpost = (req, res, next) => {
+  res.render('blogpost_form', { title: 'form blogpost' });
+};
+
+blogpostCtrl.createBlogpost = (req, res, next) => {
 
 };
 
-blogpostCtrl.createBlogspost = (req, res, next) => {
+blogpostCtrl.updateBlogpost = (req, res, next) => {
 
 };
 
-blogpostCtrl.updateBlogspost = (req, res, next) => {
-
-};
-
-blogpostCtrl.deleteBlogspost = (req, res, next) => {
+blogpostCtrl.deleteBlogpost = (req, res, next) => {
 
 };
 

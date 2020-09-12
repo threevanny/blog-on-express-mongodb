@@ -3,14 +3,14 @@ const router = express.Router();
 
 const {
   renderFormBlogpost,
-  createBlogspost,
-  updateBlogspost,
-  deleteBlogspost
+  createBlogpost,
+  updateBlogpost,
+  deleteBlogpost
 } = require('../controllers/blogpost.controller')
 
 router.get('/article/create', renderFormBlogpost);
-router.post('/article/create', createBlogspost);
-router.post('/article/update/:id', updateBlogspost);
-router.post('/article/delete/:id', deleteBlogspost);
+router.post('/article/create', createBlogpost);
+router.post('/article/update/:id', updateBlogpost);
+router.post('/article/delete/:id', deleteBlogpost);
 
 module.exports = router;
